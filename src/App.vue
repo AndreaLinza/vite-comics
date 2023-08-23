@@ -1,30 +1,95 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import TheHeader from "./components/TheHeader.vue";
+import TheFirstContent from "./components/TheFirstContent.vue";
+import TheFooter from "./components/TheFooter.vue";
+
+export default {
+  components: {
+    TheHeader,
+    TheFirstContent,
+    TheFooter,
+  },
+  data() {
+    return {};
+  },
+};
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <TheHeader></TheHeader>
+  <TheFirstContent></TheFirstContent>
+
+  <main>
+    <div class="container">
+      <div>
+        <div>
+          <img src="./assets/img/buy-comics-digital-comics.png" alt="digital-comics">
+          <span>digital comics</span>
+        </div>
+        <div>
+          <img src="./assets/img/buy-comics-merchandise.png" alt="dc-merchandise">
+          <span>dc merchandise</span>
+
+        </div>
+        <div>
+          <img src="./assets/img/buy-comics-subscriptions.png" alt="subscription">
+          <span>subscription</span>
+
+        </div>
+        <div>
+          <img src="./assets/img/buy-comics-shop-locator.png" alt="comic-shop">
+          <span>comic shop locator</span>
+
+        </div>
+        <div>
+          <img src="./assets/img/buy-dc-power-visa.svg" alt="dc-power" style="height: 50px;">
+          <span>dc power visa</span>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <TheFooter></TheFooter>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style lang="scss">
+@use "./styles/partials/variables" as *;
+
+
+main {
+  font-family: $font-primary;
+  background-color: $color-primary;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      height: 60px;
+      margin-left: 3rem;
+      
+    }
+
+    
+    span{
+      font-size: .8rem;
+      display: flex;
+      padding-left: 1rem;
+      text-transform:uppercase;
+      color: white;
+    }
+  }
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+@for $i from 1 through 10 {
+  .my-mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
