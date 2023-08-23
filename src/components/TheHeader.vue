@@ -1,5 +1,26 @@
 <script>
-export default {};
+export default {
+
+    data(){
+        return{
+            headerList:[
+                'Characters',
+                'Comics',
+                'Movies',
+                'Tv',
+                'Games',
+                'Collectibles',
+                'Video',
+                'Fans',
+                'News',
+                'Shop'
+            ]
+
+        }
+    }
+
+
+};
 </script>
 
 <template>
@@ -12,36 +33,9 @@ export default {};
                 </div>
 
                 <div class="collapse navbar-collapse d-flex justify-content-end">
-                    <ul class="navbar-nav">
+                    <ul v-for="singleElement in headerList" class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">characters</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">comics</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">movies</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">tv</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">games</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">collectibles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">video</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">fans</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">news</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">shop</a>
+                            <a class="nav-link text-uppercase" href="#">{{singleElement}}</a>
                         </li>
                     </ul>
                 </div>
@@ -70,14 +64,12 @@ header {
         font-weight: 600;
 
 
-        .nav-link {
+        a {
             color: $color-text;
-            border-radius: 0;
-            border-bottom: 2px;
 
-            &.hover {
-                color: $color-primary;
-                background-color: $color-primary;
+            &:hover {
+                color: $color-primary;              
+                border-bottom: 1px solid $color-primary;
             }
         }
     }
