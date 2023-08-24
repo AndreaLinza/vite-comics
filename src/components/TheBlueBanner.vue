@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <section>
+    <section class="blue-banner">
 
         <div class="container">
             <div class="banner-main z-1">
@@ -44,11 +44,12 @@ export default {
 <style scoped lang="scss">
 @use "../styles/partials/variables" as *;
 
-section {
+.blue-banner{
     font-family: $font-primary;
     background-color: $color-primary;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    min-height: 100px;
 
     div {
         display: flex;

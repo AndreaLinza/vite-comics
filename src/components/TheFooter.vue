@@ -56,19 +56,19 @@ export default {
 <template>
     <footer>
         <div class="container">
-            <div class="d-flex flex-column flex-wrap w-25 pt-4">
-                <div v-for="singleElement in footerList" class="pe-5">
+            <div class="d-flex flex-column flex-wrap w-25 pt-4 position-relative">
+                <div v-for="singleElement in footerList" :key="singleElement.title" class="pe-5">
                     <h3 class="title">{{ singleElement.title }}</h3>
                     <ul class="me-auto mb-2 mb-lg-0 list-unstyled text-white pb-3">
-                        <li v-for="singleCredits in singleElement.credits" class="nav-item">
+                        <li v-for="singleCredits in singleElement.credits" :key="singleCredits" class="nav-item">
                             <a class="nav-link" href="#">{{singleCredits}}</a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="container">
+                
                     <img class="dc-logo" src="../assets/img/dc-logo-bg.png" alt="">
-                </div>
+                
             </div>
         </div>
         <div class="sign-banner">
@@ -130,10 +130,11 @@ footer {
 
     .dc-logo {
         position: absolute;
-        right: 10%;
-        height: 60%;
+        left: 700px;
+        top:-55px;
+        height: 130%;
         overflow: hidden;
-        top: 30%;
+        
 
     }
 
