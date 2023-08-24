@@ -1,8 +1,9 @@
 <script>
 import TheHeader from "./components/TheHeader.vue";
 import TheFirstContent from "./components/TheFirstContent.vue";
-import TheFooter from "./components/TheFooter.vue";
 import TheBlueBanner from "./components/TheBlueBanner.vue";
+import dcList from "./db/dc-comics.json"
+import TheFooter from "./components/TheFooter.vue";
 
 export default {
   components: {
@@ -12,7 +13,9 @@ export default {
     TheBlueBanner
 },
   data() {
-    return {};
+    return {
+      dcList,
+    };
   },
 };
 </script>
@@ -31,16 +34,6 @@ export default {
 <style lang="scss">
 @use "./styles/partials/variables" as *;
 
-
-main {
-  font-family: $font-primary;
-  background-color: $color-primary;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-
-
-
-}
 
 
 </style>

@@ -1,5 +1,8 @@
 <script>
-export default {};
+
+export default {
+
+};
 </script>
 
 <template>

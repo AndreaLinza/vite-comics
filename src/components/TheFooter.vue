@@ -74,7 +74,7 @@ export default {
         <div class="sign-banner">
             <div class="container d-flex justify-content-between">
                 <div>
-                    <button type="button" class="btn btn-outline-primary text-light fw-bold">SIGN-UP NOW!</button>
+                    <button type="button" class="btn btn-outline-primary border-3 text-light fw-bold">SIGN-UP NOW!</button>
                 </div>
                 <div>
                     <span>FOLLOW US</span>
@@ -131,14 +131,14 @@ footer {
     .dc-logo {
         position: absolute;
         right: 10%;
-        height: 55%;
+        height: 60%;
         overflow: hidden;
-        top: 35%;
+        top: 30%;
 
     }
 
     .sign-banner {
-        min-height: 100px;
+        min-height: 120px;
         background-color: $color-banner;
         display: flex;
         align-items: center;

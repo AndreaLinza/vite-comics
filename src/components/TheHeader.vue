@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-    <header>
+    <header class="py-2">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
 
