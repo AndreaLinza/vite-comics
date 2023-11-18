@@ -38,7 +38,7 @@ export default {
         </button>
         <!-- List -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav text-center">
+          <ul class="navbar-nav text-center ms-lg-auto">
             <li class="nav-item" v-for="singleElement in headerList">
               <a class="nav-link text-uppercase" href="#">{{ singleElement }}</a>
             </li>
