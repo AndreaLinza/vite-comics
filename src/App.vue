@@ -34,7 +34,7 @@ export default {
 
     <section>
       <div class="container py-5">
-        <div class=" row row-cols-lg-6 row-cols-md-3 g-3">
+        <div class=" row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
           <div v-for="dcComics in dcList" class="col">
 
             <TheCardContent :thumb="dcComics.thumb" :series="dcComics.series"></TheCardContent>

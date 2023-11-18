@@ -33,7 +33,6 @@ export default {
 
 
     .card {
-
         width: 100%;
         height: 100%;
         background-color: transparent;
@@ -43,6 +42,7 @@ export default {
 
         img {
             width: 100%;
+            max-width: 200px;
             object-fit: cover;
             aspect-ratio: 1/1;
         }
